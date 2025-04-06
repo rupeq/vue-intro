@@ -1,0 +1,14 @@
+.socks {
+  display: flex;
+  flex-direction: column;
+
+  .socksItem {
+    display: flex;
+    max-width: 500px;
+
+    .socksItemLogo_Container {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}

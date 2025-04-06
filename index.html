@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Intro</title>
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Socks</h1>
+      <p>
+        Discover socks men can be proud of here. We have men's socks of all
+        materials & designs and occasions.
+      </p>
+      <button :disabled="cartItemsNumber === 0">
+        Cart ({{ cartItemsNumber }})
+      </button>
+    </header>
+    <main>
+      <socks-list
+        :check-is-in-cart="checkIsInCart"
+        @add-to-cart="addToCart"
+        @remove-from-cart="removeFromCart"
+      ></socks-list>
+    </main>
+    <footer>Created by rupeq with ᥫ᭡ {{timestamp}}</footer>
+    <script src="./main.js"></script>
+    <script src="./components/Socks.js"></script>
+    <script src="./components/SocksItem.js"></script>
+    <script>
+      app.mount(document.body);
+    </script>
+  </body>
+</html>
